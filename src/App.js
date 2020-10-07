@@ -7,8 +7,6 @@ import axios from 'axios'
 // import the contants from constants/index.js
 import { BASE_URL, API_KEY } from './constants/index'
 
-// import Details from './Details'
-
 function App() {
 
   const [photos, setPhotos] = useState([])
@@ -17,7 +15,7 @@ function App() {
     const fetchPhotos = () => {
       axios.get(`${BASE_URL}?api_key=${API_KEY}`)
         .then(res => {
-          console.log(res.data)
+          setPhotos(res.data)
         })
         .catch(err => {
           debugger
@@ -28,6 +26,9 @@ function App() {
 
   return (
     <div className="App">
+    {/* <div><Title /></div>
+    <div><Content /></div>
+    <div><Footer /></div> */}
       <p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
