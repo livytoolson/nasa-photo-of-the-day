@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className="App">
-    <h1>NASA</h1>
+    <h1>NASA PHOTO OF THE DAY</h1>
       <p>
         {/* Read through the instructions in the README.md file to build your NASA
         app! Have fun <span role="img" aria-label='go!'>🚀</span>! */}
