@@ -7,31 +7,33 @@ import axios from 'axios'
 // import the contants from constants/index.js
 import { BASE_URL, API_KEY } from './constants/index'
 
+import Title from './Title'
+import Image from './Image'
+import Content from './Content'
+
 function App() {
 
-  const [photos, setPhotos] = useState([])
+  const [data, setData] = useState([])
 
   useEffect(() => {
-    const fetchPhotos = () => {
       axios.get(`${BASE_URL}?api_key=${API_KEY}`)
         .then(res => {
-          setPhotos(res.data)
+          setData(res.data)
         })
         .catch(err => {
           debugger
         })
-    }
-    fetchPhotos()
   }, [])
 
   return (
     <div className="App">
-    {/* <div><Title /></div>
-    <div><Content /></div>
-    <div><Footer /></div> */}
+    <h1>NASA</h1>
       <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
+        {/* Read through the instructions in the README.md file to build your NASA
+        app! Have fun <span role="img" aria-label='go!'>🚀</span>! */}
+        <Title title={data.title}/>
+        <Image image={data.url}/>
+        <Content explanation={data.explanation} date={data.date}/>
       </p>
     </div>
   );
