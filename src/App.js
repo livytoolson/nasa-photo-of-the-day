@@ -33,14 +33,10 @@ function App() {
 
   return (
     <StyledBackground className="App">
-    <h1>NASA PHOTO OF THE DAY</h1>
-      <p>
-        {/* Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>! */}
+      <h1>NASA PHOTO OF THE DAY</h1>
         <Title title={data.title}/>
         <Image image={data.url}/>
         <Content explanation={data.explanation} date={data.date}/>
-      </p>
     </StyledBackground>
   );
 }
