@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import styled from 'styled-components'
 
 // import the axios lib from node_modules
 import axios from 'axios'
@@ -10,6 +11,11 @@ import { BASE_URL, API_KEY } from './constants/index'
 import Title from './Title'
 import Image from './Image'
 import Content from './Content'
+
+// styled component
+const StyledBackground = styled.div`
+  background-color: ${pr => pr.theme.backgroundColor};
+`
 
 function App() {
 
@@ -26,7 +32,7 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <StyledBackground className="App">
     <h1>NASA PHOTO OF THE DAY</h1>
       <p>
         {/* Read through the instructions in the README.md file to build your NASA
@@ -35,7 +41,7 @@ function App() {
         <Image image={data.url}/>
         <Content explanation={data.explanation} date={data.date}/>
       </p>
-    </div>
+    </StyledBackground>
   );
 }
 
