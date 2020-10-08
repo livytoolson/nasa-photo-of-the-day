@@ -11,6 +11,7 @@ injectGlobal`
   }
 
   h1 {
+      font-size: 5px;
       font-family: 'Strait', sans-serif;
   }
 `
