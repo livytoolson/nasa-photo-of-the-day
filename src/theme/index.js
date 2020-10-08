@@ -1,6 +1,6 @@
 // theme object
 export default {
-    background: 'darkgray',
+    background: 'gray',
     black: 'black',
     white: 'white',
     nasaRed: '#fc3d21',

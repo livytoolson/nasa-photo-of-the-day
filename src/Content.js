@@ -6,22 +6,24 @@ import styled from 'styled-components'
 // component styles
 const StyledExplanation = styled.p`
     color: ${pr => pr.theme.white};
+    font-family: sans-serif;
 `
 
 const StyledDate = styled.p`
     color: ${pr => pr.theme.white};
-    margin-top: 1px; 
+    margin-top: 1px;
+    font-family: sans-serif;
 `
 
 const StyledDiv = styled.div`
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    align-items: center; */
-    /* width: 65%; */
+    align-items: center;
+    width: 65%;
     background-color: ${pr => pr.theme.background};
-    padding-bottom: 20px;
-    padding-top: 20px;
-    border-style: solid 5px ${pr => pr.theme.nasaRed};
+    border: 5px solid ${pr => pr.theme.nasaRed};
+    padding: 20px;
+    margin: 10px;
 `
 
 export default function Content(props) {
