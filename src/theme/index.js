@@ -1,6 +1,6 @@
 // theme object
 export default {
-    background: 'gray',
+    background: 'black',
     black: 'black',
     white: 'white',
     nasaRed: '#fc3d21',
@@ -12,5 +12,6 @@ export default {
       padding: {
         small: '4px',
         medium: '8px',
+        large: '20px'
       }
 }

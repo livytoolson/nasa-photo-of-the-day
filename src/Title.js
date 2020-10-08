@@ -2,13 +2,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
+// component styling
 const StyledTitle = styled.div`
-    background-color: ${pr => pr.theme.background};
-    border: 5px solid ${pr => pr.theme.nasaRed};
-    padding: 7px;
-    margin: 10px;
+    border: 3px solid ${pr => pr.theme.nasaRed};
+    padding: ${pr => pr.theme.padding.small};
+    margin-bottom: 10px;
     color: ${pr => pr.theme.white};
-    width: 65%;
+    width: 25%;
+    font-size: 10px;
+    background-color: ${pr => pr.theme.nasaBlue};
 `
 
 export default function Title(props) {

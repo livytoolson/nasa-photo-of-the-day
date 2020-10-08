@@ -3,16 +3,18 @@
 import React from 'react'
 import styled from 'styled-components'
 
-// component styles
+// component styling
 const StyledExplanation = styled.p`
     color: ${pr => pr.theme.white};
-    font-family: sans-serif;
+    @import url('https://fonts.googleapis.com/css2?family=Days+One&family=Roboto+Slab&display=swap');
+    font-family: 'Roboto Slab', serif;
 `
 
 const StyledDate = styled.p`
     color: ${pr => pr.theme.white};
     margin-top: 1px;
-    font-family: sans-serif;
+    @import url('https://fonts.googleapis.com/css2?family=Days+One&family=Roboto+Slab&display=swap');
+    font-family: 'Roboto Slab', serif;
 `
 
 const StyledDiv = styled.div`
@@ -20,10 +22,10 @@ const StyledDiv = styled.div`
     flex-direction: column;
     align-items: center;
     width: 65%;
-    background-color: ${pr => pr.theme.background};
-    border: 5px solid ${pr => pr.theme.nasaRed};
-    padding: 20px;
-    margin: 10px;
+    border: 3px solid ${pr => pr.theme.nasaRed};
+    padding: ${pr => pr.theme.padding.large};
+    margin-top: 7px;
+    background-color: ${pr => pr.theme.nasaBlue};
 `
 
 export default function Content(props) {

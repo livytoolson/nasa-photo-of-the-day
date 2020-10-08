@@ -11,7 +11,24 @@ import Title from './Title'
 import Image from './Image'
 import Content from './Content'
 
-// styled component
+import styled from 'styled-components'
+
+// component styling
+const StyledBackground = styled.div`
+  background-image: url(
+    'https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80'
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+const StyledTitle = styled.h1`
+  @import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+  font-family: 'Days One', sans-serif;
+  font-size: 40px;
+  color: ${pr => pr.theme.white};
+`
 
 function App() {
 
@@ -28,12 +45,12 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <h1>NASA PHOTO OF THE DAY</h1>
+    <StyledBackground className="App">
+      <StyledTitle>NASA PHOTO OF THE DAY</StyledTitle>
         <Title title={data.title}/>
         <Image image={data.url}/>
         <Content explanation={data.explanation} date={data.date}/>
-    </div>
+    </StyledBackground>
   );
 }
 
