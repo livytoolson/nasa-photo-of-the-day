@@ -18,9 +18,6 @@ const StyledDate = styled.p`
 `
 
 const StyledDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 65%;
     border: 3px solid ${pr => pr.theme.nasaRed};
     padding: ${pr => pr.theme.padding.large};
